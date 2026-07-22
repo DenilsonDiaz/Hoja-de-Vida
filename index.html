@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Denilson Yair Díaz López</h1>
+        <p>Estudiante de Ingeniería en Sistemas</p>
+    </header>
+
+    <section>
+
+        <picture>
+
+            <source srcset="imagenes/foto_250.avif" type="image/avif">
+
+            <source srcset="imagenes/foto_250.webp" type="image/webp">
+
+            <img
+                src="imagenes/foto_250.jpg"
+                alt="Fotografía de Denilson Yair Díaz López"
+                width="250"
+                height="345">
+
+        </picture>
+
+    </section>
+
+    <hr>
+
+    <section>
+
+        <h2>Información Personal</h2>
+
+        <p><strong>Nombre:</strong> Denilson Yair Díaz López</p>
+
+        <p><strong>Edad:</strong> 22 años</p>
+
+        <p><strong>Correo:</strong> denilsondiazlopez@umes.edu.gt</p>
+
+        <p><strong>Teléfono:</strong> 40174343</p>
+
+        <p><strong>Dirección:</strong> Quetzaltenango, Guatemala</p>
+
+    </section>
+
+    <section>
+
+        <h2>Perfil Profesional</h2>
+
+        <p>
+            Soy estudiante de Ingeniería en Sistemas con interés en el desarrollo de software,
+            bases de datos y tecnologías web. Me considero una persona responsable,
+            organizada y con facilidad para aprender nuevas herramientas y trabajar en equipo.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Educación</h2>
+
+        <ul>
+            <li>Bachiller en Computación - IPEA</li>
+            <li>Ingeniería en Sistemas - Universidad Mesoamericana (Actualmente)</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Habilidades</h2>
+
+        <ul>
+
+            <li>Trabajo en equipo</li>
+
+            <li>Comunicación</li>
+
+            <li>Responsabilidad</li>
+
+            <li>Adaptabilidad</li>
+
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Contacto y Disponibilidad</h2>
+
+        <form method="post">
+
+            <label for="nombre">Nombre:</label><br>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required>
+
+            <br><br>
+
+            <label for="correo">Correo electrónico:</label><br>
+
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                required>
+
+            <br><br>
+
+            <label for="telefono">Teléfono:</label><br>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required>
+
+            <br><br>
+
+            <label for="fecha">Fecha disponible para iniciar:</label><br>
+
+            <input
+                type="date"
+                id="fecha"
+                name="fecha"
+                min="2026-07-21"
+                max="2026-12-31"
+                required>
+
+            <br><br>
+
+            <label for="hora">Hora preferida para entrevista:</label><br>
+
+            <input
+                type="time"
+                id="hora"
+                name="hora"
+                min="08:00"
+                max="17:00"
+                step="1800"
+                required>
+
+            <br><br>
+
+            <label for="modalidad">Modalidad de trabajo:</label><br>
+
+            <select
+                id="modalidad"
+                name="modalidad"
+                required>
+
+                <option value="">Seleccione una opción</option>
+
+                <option value="presencial">Presencial</option>
+
+                <option value="hibrido">Híbrido</option>
+
+                <option value="remoto">Remoto</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="carta">Carta de presentación:</label><br>
+
+            <textarea
+                id="carta"
+                name="carta"
+                rows="6"
+                cols="50"
+                required></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Enviar">
+
+            <input type="reset" value="Limpiar">
+
+        </form>
+
+    </section>
+
+    <footer>
+
+        <hr>
+
+        <p>© 2026 - Hoja de Vida - Denilson Yair Díaz López</p>
+
+    </footer>
+
+</body>
+
+</html>
