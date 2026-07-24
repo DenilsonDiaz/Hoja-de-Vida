@@ -1,0 +1,130 @@
+/* Estilo general de la página */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf8de;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+
+header {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Contenido principal */
+
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Secciones */
+
+section {
+    background-color: rgb(221, 230, 245);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(43, 74, 248);
+}
+
+/* Títulos */
+
+h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+/* Imagen */
+
+picture {
+    display: block;
+    text-align: center;
+}
+
+picture img {
+    border-radius: 10px;
+    border: 3px solid #0056b3;
+}
+
+/* Listas */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Formulario */
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+/* Cuando el usuario selecciona un campo */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Botones */
+
+input[type="submit"],
+input[type="reset"] {
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+}
+
+input[type="reset"] {
+    background-color: gray;
+}
+
+/* Efecto al pasar el mouse */
+
+input[type="submit"]:hover {
+    background-color: #0bc515;
+}
+
+input[type="reset"]:hover {
+    background-color: #ee4545;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
