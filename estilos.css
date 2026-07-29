@@ -1,58 +1,131 @@
-/* Estilo general de la página */
+/* Configuración general */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #faf8de;
-    color: #333333;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Encabezado */
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #aadf1848;
+    color: #0e0d0d;
+    line-height: 1.6;
+}
+
+
+/* Encabezado usando Flexbox */
 
 header {
-    background-color: #0056b3;
+    min-height: 180px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #08851d;
     color: white;
     text-align: center;
-    padding: 25px;
 }
 
-/* Contenido principal */
-
-main {
-    width: 80%;
-    margin: 20px auto;
+header h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
 }
 
-/* Secciones */
+header p {
+    font-size: 18px;
+}
+
+
+/* Contenedor principal usando Grid */
+
+.contenedor-cv {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+
+/* Diseño de todas las secciones */
 
 section {
-    background-color: rgb(221, 230, 245);
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgb(43, 74, 248);
+    background-color: rgb(153, 245, 149);
+    border: 1px solid #04570f;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px #37f7cd;
 }
+
+
+/* Fotografía centrada con Flexbox */
+
+.seccion-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+picture img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #263238;
+    border-radius: 8px;
+}
+
+
+/* Posición de las secciones dentro del Grid */
+
+.informacion-personal {
+    grid-column: 2;
+}
+
+.perfil {
+    grid-column: 1 / 3;
+}
+
+.educacion {
+    grid-column: 1;
+}
+
+.habilidades {
+    grid-column: 2;
+}
+
+.contacto {
+    grid-column: 1 / 3;
+}
+
 
 /* Títulos */
 
 h2 {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
+    margin-bottom: 15px;
     padding-bottom: 5px;
+    color: #263238;
+    border-bottom: 2px solid #607d8b;
 }
 
-/* Imagen */
 
-picture {
-    display: block;
-    text-align: center;
+/* Párrafos */
+
+section p {
+    margin-bottom: 10px;
 }
 
-picture img {
-    border-radius: 10px;
-    border: 3px solid #0056b3;
-}
 
 /* Listas */
 
@@ -64,9 +137,32 @@ li {
     margin-bottom: 8px;
 }
 
-/* Formulario */
+
+/* Formulario usando Grid */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+/* Cada campo usando Flexbox */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Carta de presentación ocupa las dos columnas */
+
+.campo:last-of-type {
+    grid-column: 1 / 3;
+}
 
 label {
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
@@ -75,56 +171,115 @@ select,
 textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: 1px solid #999999;
     border-radius: 5px;
 }
-
-/* Cuando el usuario selecciona un campo */
 
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #0056b3;
     outline: none;
+    border-color: #263238;
 }
 
-/* Botones */
+textarea {
+    resize: vertical;
+}
 
-input[type="submit"],
-input[type="reset"] {
+
+/* Botones usando Flexbox */
+
+.botones {
+    grid-column: 1 / 3;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.botones input {
     width: auto;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border: none;
-    border-radius: 5px;
     color: white;
     cursor: pointer;
 }
 
 input[type="submit"] {
-    background-color: #0056b3;
+    background-color: #263238;
 }
 
 input[type="reset"] {
-    background-color: gray;
+    background-color: #757575;
 }
 
-/* Efecto al pasar el mouse */
-
 input[type="submit"]:hover {
-    background-color: #0bc515;
+    background-color: #455a64;
 }
 
 input[type="reset"]:hover {
-    background-color: #ee4545;
+    background-color: #555555;
 }
 
-/* Pie de página */
+
+/* Pie de página usando Flexbox */
 
 footer {
-    background-color: #0056b3;
+    min-height: 80px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #263238;
     color: white;
     text-align: center;
-    padding: 15px;
+}
+
+
+/* Diseño responsivo para pantallas pequeñas */
+
+@media (max-width: 700px) {
+
+    .contenedor-cv {
+        width: 94%;
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-foto,
+    .informacion-personal,
+    .perfil,
+    .educacion,
+    .habilidades,
+    .contacto {
+        grid-column: 1;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .campo:last-of-type {
+        grid-column: 1;
+    }
+
+    .botones {
+        grid-column: 1;
+        flex-direction: column;
+    }
+
+    .botones input {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
 }
