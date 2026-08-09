@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Mis Proyectos | Denilson Yair Díaz López</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <!-- Personalización de Bootstrap -->
+    <link rel="stylesheet" href="proyectos.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+
+    <nav
+        class="navbar navbar-expand-md navbar-dark bg-primary"
+        aria-label="Navegación principal">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                Denilson Yair Díaz López
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu-principal"
+                aria-controls="menu-principal"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="menu-principal">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html">
+
+                            Hoja de vida
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="proyectos.html"
+                            aria-current="page">
+
+                            Proyectos
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Presentación -->
+
+    <header class="bg-body-tertiary py-5">
+
+        <div class="container text-center py-4">
+
+            <h1 class="display-4 fw-bold mb-3">
+                Mis Proyectos
+            </h1>
+
+            <p class="lead text-secondary mb-4">
+                Portafolio de trabajos desarrollados durante
+                la carrera de Ingeniería en Sistemas.
+            </p>
+
+            <a
+                class="btn btn-primary btn-lg"
+                href="#lista-proyectos">
+
+                Ver proyectos
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Sección de proyectos -->
+
+        <section
+            id="lista-proyectos"
+            class="container py-5">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Proyectos desarrollados
+                </h2>
+
+                <p class="text-secondary">
+                    Algunos trabajos realizados durante mi formación
+                    universitaria.
+                </p>
+
+            </div>
+
+
+            <!-- Rejilla de proyectos -->
+
+            <div class="row g-4">
+
+                <!-- Proyecto 1: API -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img
+                            src="imagenes/proyecto-api.jpg"
+                            class="card-img-top"
+                            alt="Documentación Swagger de una API REST de estudiantes con métodos GET, POST, PUT, PATCH y DELETE">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5 fw-bold">
+                                API REST de estudiantes
+                            </h3>
+
+                            <p class="card-text">
+                                API desarrollada con TypeScript y Express
+                                para administrar estudiantes mediante los
+                                métodos GET, POST, PUT, PATCH y DELETE.
+                                La documentación se realizó con Swagger.
+                            </p>
+
+                            <div class="mb-3">
+
+                                <span class="badge text-bg-primary">
+                                    TypeScript
+                                </span>
+
+                                <span class="badge text-bg-secondary">
+                                    Express
+                                </span>
+
+                                <span class="badge text-bg-success">
+                                    Swagger
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="https://github.com/DenilsonDiaz/API_Cuatro_Metodos"
+                                class="btn btn-primary mt-auto">
+
+                                Ver repositorio
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Proyecto 2: Base de datos -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img
+                            src="imagenes/proyecto-base-datos.jpg"
+                            class="card-img-top"
+                            alt="Consulta SQL ejecutada en DBeaver mostrando productos y existencias almacenadas en PostgreSQL">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5 fw-bold">
+                                Sistema de base de datos
+                            </h3>
+
+                            <p class="card-text">
+                                Base de datos relacional para administrar
+                                categorías, productos, clientes y ventas.
+                                Incluye consultas SQL, procedimientos
+                                almacenados y triggers para actualizar
+                                las existencias.
+                            </p>
+
+                            <div class="mb-3">
+
+                                <span class="badge text-bg-primary">
+                                    PostgreSQL
+                                </span>
+
+                                <span class="badge text-bg-secondary">
+                                    DBeaver
+                                </span>
+
+                                <span class="badge text-bg-success">
+                                    SQL
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="#contacto"
+                                class="btn btn-primary mt-auto">
+
+                                Solicitar información
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Proyecto 3: Sistema contable -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img
+                            src="imagenes/proyecto-contable.jpg"
+                            class="card-img-top"
+                            alt="Interfaz de un sistema contable desarrollado en Python para una empresa de cerveza artesanal">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5 fw-bold">
+                                Sistema contable empresarial
+                            </h3>
+
+                            <p class="card-text">
+                                Sistema contable desarrollado en Python
+                                para una empresa de cerveza artesanal.
+                                Permite administrar clientes, proveedores,
+                                empleados, inventario, transacciones,
+                                libro diario, libro mayor y reportes.
+                            </p>
+
+                            <div class="mb-3">
+
+                                <span class="badge text-bg-primary">
+                                    Python
+                                </span>
+
+                                <span class="badge text-bg-secondary">
+                                    Tkinter
+                                </span>
+
+                                <span class="badge text-bg-success">
+                                    Contabilidad
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="#contacto"
+                                class="btn btn-primary mt-auto">
+
+                                Solicitar información
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Sección de contacto -->
+
+        <section
+            id="contacto"
+            class="bg-body-tertiary py-5">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-lg-8">
+
+                        <div class="text-center mb-4">
+
+                            <h2 class="fw-bold">
+                                Contacto
+                            </h2>
+
+                            <p class="text-secondary">
+                                Utilice el siguiente formulario para
+                                solicitar información sobre mis proyectos.
+                            </p>
+
+                        </div>
+
+
+                        <form>
+
+                            <div class="row g-3">
+
+                                <!-- Nombre -->
+
+                                <div class="col-12 col-md-6">
+
+                                    <label
+                                        for="nombre"
+                                        class="form-label">
+
+                                        Nombre
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nombre"
+                                        name="nombre"
+                                        required>
+
+                                </div>
+
+
+                                <!-- Correo -->
+
+                                <div class="col-12 col-md-6">
+
+                                    <label
+                                        for="correo"
+                                        class="form-label">
+
+                                        Correo electrónico
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="correo"
+                                        name="correo"
+                                        required>
+
+                                </div>
+
+
+                                <!-- Motivo -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="motivo"
+                                        class="form-label">
+
+                                        Motivo de contacto
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="motivo"
+                                        name="motivo"
+                                        required>
+
+                                        <option
+                                            value=""
+                                            selected
+                                            disabled>
+
+                                            Seleccione una opción
+                                        </option>
+
+                                        <option value="proyecto">
+                                            Información sobre un proyecto
+                                        </option>
+
+                                        <option value="colaboracion">
+                                            Propuesta de colaboración
+                                        </option>
+
+                                        <option value="trabajo">
+                                            Oportunidad de trabajo
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Mensaje -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="mensaje"
+                                        class="form-label">
+
+                                        Mensaje
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="mensaje"
+                                        name="mensaje"
+                                        rows="5"
+                                        required></textarea>
+
+                                </div>
+
+
+                                <!-- Botón -->
+
+                                <div class="col-12">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary">
+
+                                        Enviar mensaje
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Pie de página -->
+
+    <footer class="bg-primary text-white text-center py-4">
+
+        <div class="container">
+
+            <p class="mb-0">
+                © 2026 Denilson Yair Díaz López
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript de Bootstrap -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
