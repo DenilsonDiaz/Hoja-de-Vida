@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de Bootstrap | Denilson Díaz</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="proyectos.css">
+</head>
+<body id="inicio">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Denilson Díaz</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu-documentacion"
+                aria-controls="menu-documentacion"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-documentacion">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hoja de vida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="documentacion.html" aria-current="page">
+                            Documentación
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-body-tertiary py-5">
+        <div class="container text-center py-4">
+            <span class="badge text-bg-primary mb-3">Bootstrap 5.3</span>
+            <h1 class="display-4 fw-bold mb-3">Mi documentación de Bootstrap</h1>
+            <p class="lead text-secondary mb-0">
+                Notas completas de las clases, la rejilla, los componentes y los errores que trabajé en mi página de proyectos.
+            </p>
+        </div>
+    </header>
+    <main>
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="h3 fw-bold mb-3">Índice</h2>
+                            <p class="text-secondary">Desde aquí puedo llegar directamente a cualquier tema.</p>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <div class="list-group">
+                                        <a class="list-group-item list-group-item-action" href="#integracion">1. Integración por CDN</a>
+                                        <a class="list-group-item list-group-item-action" href="#breakpoints">2. Breakpoints</a>
+                                        <a class="list-group-item list-group-item-action" href="#rejilla">3. Rejilla responsiva</a>
+                                        <a class="list-group-item list-group-item-action" href="#utilidades">4. Utilidades que usé</a>
+                                        <a class="list-group-item list-group-item-action" href="#boton">5. Botón</a>
+                                        <a class="list-group-item list-group-item-action" href="#tarjeta">6. Tarjeta</a>
+                                        <a class="list-group-item list-group-item-action" href="#insignias">7. Insignias</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="list-group">
+                                        <a class="list-group-item list-group-item-action" href="#navbar">8. Navbar y toggler</a>
+                                        <a class="list-group-item list-group-item-action" href="#formulario">9. Formulario</a>
+                                        <a class="list-group-item list-group-item-action" href="#enlaces">10. Enlaces y navegación</a>
+                                        <a class="list-group-item list-group-item-action" href="#variables">11. Variables de color</a>
+                                        <a class="list-group-item list-group-item-action" href="#errores">12. Errores y silencios</a>
+                                        <a class="list-group-item list-group-item-action" href="#acordeon">13. Extra personal: Accordion</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="integracion" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">1. Integración de Bootstrap</h2>
+                        <p>
+                            Para usar Bootstrap por CDN necesito dos líneas. La primera carga los estilos y la segunda
+                            carga los componentes que dependen de JavaScript.
+                        </p>
+                        <h3 class="h5 fw-bold mt-4">CSS dentro de &lt;head&gt;</h3>
+                        <p>
+                            Esta línea va dentro de <code>&lt;head&gt;</code>. Gracias a ella funcionan la rejilla,
+                            los botones, las tarjetas, los formularios, los colores y las utilidades.
+                        </p>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"&gt;</code></pre>
+                        <h3 class="h5 fw-bold mt-4">Bundle antes de cerrar &lt;/body&gt;</h3>
+                        <p>
+                            Esta línea va al final del documento. En mi sitio la necesito para el botón hamburguesa
+                            y para el Accordion.
+                        </p>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"&gt;
+&lt;/script&gt;</code></pre>
+                        <h3 class="h5 fw-bold mt-4">Qué significan los atributos del CDN</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle">
+                                <thead class="table-dark">
+                                    <tr><th>Atributo</th><th>Cómo lo entiendo</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>href</code></td><td>Dirección desde donde se carga el CSS.</td></tr>
+                                    <tr><td><code>rel="stylesheet"</code></td><td>Le indica al navegador que el recurso es una hoja de estilos.</td></tr>
+                                    <tr><td><code>src</code></td><td>Dirección desde donde se carga el JavaScript.</td></tr>
+                                    <tr><td><code>integrity</code></td><td>Permite comprobar que el archivo recibido corresponde al esperado.</td></tr>
+                                    <tr><td><code>crossorigin</code></td><td>Se usa porque el recurso viene desde otro origen.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h5 fw-bold mt-4">Orden de mis hojas de estilo</h3>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;link href="...bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="proyectos.css"&gt;</code></pre>
+                        <p>
+                            Primero cargo Bootstrap y después <code>proyectos.css</code>. De esa forma mis variables
+                            personales se leen después de Bootstrap y puedo cambiar la paleta de los componentes sin
+                            escribir una segunda maquetación.
+                        </p>
+                        <h3 class="h5 fw-bold mt-4">Viewport</h3>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                        <p>
+                            Esta etiqueta hace que el navegador móvil use el ancho real del dispositivo. La necesito
+                            para que los breakpoints y la rejilla se comporten como espero en teléfonos.
+                        </p>
+                        <div class="alert alert-secondary mt-4" role="alert">
+                            <strong>Nota:</strong>
+                            Al principio solo miraba si la página abría, pero eso no confirma que Bootstrap haya cargado.
+                            Ahora lo reviso en Network y busco que el CSS y el bundle tengan estado 200.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="breakpoints" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h2 class="fw-bold mb-3">2. Breakpoints</h2>
+                    <p>
+                        Los breakpoints son anchos desde los cuales Bootstrap cambia el comportamiento de una clase.
+                        Bootstrap comienza con la pantalla pequeña y agrega cambios cuando el ancho aumenta.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Rango</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Prefijo</th>
+                                    <th scope="col">Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Extra pequeño</td>
+                                    <td>xs</td>
+                                    <td><code>col-</code></td>
+                                    <td>Menos de 576 px</td>
+                                </tr>
+                                <tr>
+                                    <td>Pequeño</td>
+                                    <td>sm</td>
+                                    <td><code>col-sm-</code></td>
+                                    <td>Desde 576 px</td>
+                                </tr>
+                                <tr>
+                                    <td>Mediano</td>
+                                    <td>md</td>
+                                    <td><code>col-md-</code></td>
+                                    <td>Desde 768 px</td>
+                                </tr>
+                                <tr>
+                                    <td>Grande</td>
+                                    <td>lg</td>
+                                    <td><code>col-lg-</code></td>
+                                    <td>Desde 992 px</td>
+                                </tr>
+                                <tr>
+                                    <td>Extra grande</td>
+                                    <td>xl</td>
+                                    <td><code>col-xl-</code></td>
+                                    <td>Desde 1200 px</td>
+                                </tr>
+                                <tr>
+                                    <td>Extra extra grande</td>
+                                    <td>xxl</td>
+                                    <td><code>col-xxl-</code></td>
+                                    <td>Desde 1400 px</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="h5 fw-bold mt-4">Mobile first</h3>
+                    <p>
+                        Bootstrap parte del tamaño más pequeño y va agregando cambios cuando aumenta el ancho.
+                        Por eso <code>col-12</code> no lleva nombre de breakpoint y luego puedo agregar
+                        <code>col-md-6</code> y <code>col-lg-4</code>.
+                    </p>
+                    <h3 class="h5 fw-bold mt-4">Ejemplos rápidos</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <thead class="table-dark"><tr><th>Clase</th><th>Desde cuándo actúa</th></tr></thead>
+                            <tbody>
+                                <tr><td><code>col-12</code></td><td>Desde el ancho más pequeño.</td></tr>
+                                <tr><td><code>col-sm-6</code></td><td>Desde 576 px.</td></tr>
+                                <tr><td><code>col-md-6</code></td><td>Desde 768 px.</td></tr>
+                                <tr><td><code>col-lg-4</code></td><td>Desde 992 px.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        <strong>Mi forma de leerlos:</strong>
+                        <code>md</code> no significa únicamente tableta. Significa que la regla empieza en 768 px y
+                        continúa en los tamaños mayores hasta que otra clase la cambie.
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                </div>
+            </div>
+        </section>
+        <section id="rejilla" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">3. Rejilla responsiva</h2>
+                        <p>
+                            La rejilla que usé sigue este orden: <code>container</code>, después <code>row</code> y dentro
+                            de la fila van las columnas.
+                        </p>
+                        <div class="row g-3 text-center mb-4">
+                            <div class="col-12 col-md-4">
+                                <div class="border rounded p-3 bg-white h-100">
+                                    <h3 class="h5 fw-bold">container</h3>
+                                    <p class="mb-0">Centra el contenido y deja espacio a los lados.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="border rounded p-3 bg-white h-100">
+                                    <h3 class="h5 fw-bold">row</h3>
+                                    <p class="mb-0">Crea la fila y contiene las columnas.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="border rounded p-3 bg-white h-100">
+                                    <h3 class="h5 fw-bold">col</h3>
+                                    <p class="mb-0">Define cuánto espacio ocupa cada elemento.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold">Combinación usada en mis tarjetas</h3>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;div class="row g-4"&gt;
+    &lt;div class="col-12 col-md-6 col-lg-4"&gt;
+        &lt;article class="card h-100 shadow-sm"&gt;
+            Contenido del proyecto
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        <div class="table-responsive mt-4">
+                            <table class="table table-bordered align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">Ancho</th>
+                                        <th scope="col">Clase</th>
+                                        <th scope="col">Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Menos de 768 px</td>
+                                        <td><code>col-12</code></td>
+                                        <td>Una tarjeta por fila.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Desde 768 px</td>
+                                        <td><code>col-md-6</code></td>
+                                        <td>Dos tarjetas por fila.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Desde 992 px</td>
+                                        <td><code>col-lg-4</code></td>
+                                        <td>Tres tarjetas por fila.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h5 fw-bold mt-4">Demo viva de mi rejilla</h3>
+                        <p>
+                            Estos tres bloques usan la misma combinación de mis proyectos. Al cambiar el ancho del
+                            navegador puedo ver el paso de una, a dos y después a tres columnas.
+                        </p>
+                        <div class="row g-3 text-center mb-4">
+                            <div class="col-12 col-md-6 col-lg-4"><div class="text-bg-primary p-3 rounded h-100">Proyecto 1<br><code>col-12 col-md-6 col-lg-4</code></div></div>
+                            <div class="col-12 col-md-6 col-lg-4"><div class="text-bg-secondary p-3 rounded h-100">Proyecto 2<br><code>col-12 col-md-6 col-lg-4</code></div></div>
+                            <div class="col-12 col-md-6 col-lg-4"><div class="text-bg-success p-3 rounded h-100">Proyecto 3<br><code>col-12 col-md-6 col-lg-4</code></div></div>
+                        </div>
+                        <h3 class="h5 fw-bold mt-4">La rejilla se basa en 12 espacios</h3>
+                        <p>
+                            <code>col-12</code> ocupa toda la fila, <code>col-6</code> la mitad, <code>col-4</code> una
+                            tercera parte y <code>col-3</code> una cuarta parte. Por eso 6 + 6 forma dos columnas y
+                            4 + 4 + 4 forma tres.
+                        </p>
+                        <h3 class="h5 fw-bold mt-4">container, container-fluid y gap</h3>
+                        <p>
+                            <code>container</code> centra y limita el contenido; <code>container-fluid</code> ocupa todo
+                            el ancho. <code>g-4</code> separa filas y columnas, <code>gx-*</code> solo el espacio horizontal
+                            y <code>gy-*</code> solo el vertical.
+                        </p>
+                        <div class="alert alert-secondary" role="alert">
+                            <strong>Nota:</strong>
+                            Lo que más me confundía era pensar que las tres clases funcionaban al mismo tiempo. En
+                            realidad Bootstrap usa la que corresponde al ancho actual.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="utilidades" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h2 class="fw-bold mb-3">4. Utilidades que usé</h2>
+                    <p>
+                        Estas clases me permitieron controlar espacios, texto y alineación sin escribir reglas de
+                        maquetación en CSS.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Clase</th>
+                                    <th scope="col">Qué hace</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>py-5</code></td><td>Agrega espacio arriba y abajo.</td></tr>
+                                <tr><td><code>mb-3</code></td><td>Agrega margen debajo.</td></tr>
+                                <tr><td><code>g-4</code></td><td>Separa filas y columnas.</td></tr>
+                                <tr><td><code>text-center</code></td><td>Centra el texto.</td></tr>
+                                <tr><td><code>fw-bold</code></td><td>Coloca el texto en negrita.</td></tr>
+                                <tr><td><code>shadow-sm</code></td><td>Agrega una sombra suave.</td></tr>
+                                <tr><td><code>h-100</code></td><td>Usa toda la altura disponible.</td></tr>
+                                <tr><td><code>d-flex</code></td><td>Activa Flexbox mediante Bootstrap.</td></tr>
+                                <tr><td><code>flex-column</code></td><td>Ordena de arriba hacia abajo.</td></tr>
+                                <tr><td><code>mt-auto</code></td><td>Empuja el botón hacia abajo.</td></tr>
+                                <tr><td><code>ms-auto</code></td><td>Empuja el menú hacia la derecha.</td></tr>
+                                <tr><td><code>justify-content-center</code></td><td>Centra columnas dentro de una fila.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="h5 fw-bold mt-4">Cómo leo las clases de espacio</h3>
+                    <p>
+                        <code>m</code> significa margin y <code>p</code> padding. Las letras son <code>t</code> arriba,
+                        <code>b</code> abajo, <code>s</code> inicio, <code>e</code> final, <code>x</code> horizontal y
+                        <code>y</code> vertical.
+                    </p>
+                    <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;div class="p-3"&gt;Padding en todos los lados&lt;/div&gt;
+&lt;div class="px-3"&gt;Padding horizontal&lt;/div&gt;
+&lt;div class="py-3"&gt;Padding vertical&lt;/div&gt;
+&lt;div class="m-3"&gt;Margin en todos los lados&lt;/div&gt;
+&lt;div class="mx-3"&gt;Margin horizontal&lt;/div&gt;
+&lt;div class="my-3"&gt;Margin vertical&lt;/div&gt;</code></pre>
+                    <p>
+                        Los números de 0 a 5 representan niveles de espacio de Bootstrap, no píxeles escritos por mí.
+                        <code>auto</code> deja que el navegador distribuya el espacio; por eso <code>ms-auto</code> puede
+                        empujar los enlaces de la navbar hacia la derecha.
+                    </p>
+                    <div class="alert alert-secondary" role="alert">
+                        <strong>Nota:</strong>
+                        En lugar de escribir un margen propio para cada parte, uso clases como <code>mb-3</code> o
+                        <code>py-5</code>. Así la página mantiene el mismo sistema de espacios.
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                </div>
+            </div>
+        </section>
+        <section id="boton" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">5. Botón</h2>
+                        <p>
+                            Uso <code>btn</code> como clase base y <code>btn-primary</code> para aplicar el color
+                            principal de mi sitio.
+                        </p>
+                        <div class="mb-3">
+                            <a class="btn btn-primary" href="#rejilla">Ver rejilla</a>
+                        </div>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;a class="btn btn-primary" href="#rejilla"&gt;
+    Ver rejilla
+&lt;/a&gt;</code></pre>
+                        <h3 class="h5 fw-bold mt-4">Qué debo reconocer</h3>
+                        <ul>
+                            <li><code>btn</code>: clase base.</li>
+                            <li><code>btn-primary</code>: variante principal.</li>
+                            <li><code>btn-sm</code>: botón más pequeño.</li>
+                            <li><code>btn-lg</code>: botón más grande.</li>
+                            <li><code>disabled</code>: evita que un botón pueda utilizarse.</li>
+                        </ul>
+                        <p>
+                            En mis páginas también uso botones sobre etiquetas <code>a</code>. Siguen siendo enlaces,
+                            pero Bootstrap les da apariencia de botón.
+                        </p>
+                        <div class="alert alert-secondary" role="alert">
+                            <strong>Nota:</strong>
+                            Si dejo solamente <code>btn-primary</code>, el botón no queda completo porque también
+                            necesita la clase base <code>btn</code>.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tarjeta" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h2 class="fw-bold mb-3">6. Tarjeta</h2>
+                    <p>La tarjeta reúne una imagen, un título, una descripción y un enlace.</p>
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-12 col-md-8 col-lg-6">
+                            <article class="card h-100 shadow-sm">
+                                <img
+                                    src="imagenes/proyecto-api.jpg"
+                                    class="card-img-top"
+                                    alt="Documentación Swagger de la API de estudiantes">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title h5 fw-bold">API REST de estudiantes</h3>
+                                    <p class="card-text">API desarrollada con TypeScript y Express.</p>
+                                    <a class="btn btn-primary mt-auto" href="proyectos.html">Ver proyecto</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;article class="card h-100 shadow-sm"&gt;
+    &lt;img
+        src="imagenes/proyecto-api.jpg"
+        class="card-img-top"
+        alt="Documentación Swagger de la API de estudiantes"&gt;
+    &lt;div class="card-body d-flex flex-column"&gt;
+        &lt;h3 class="card-title h5 fw-bold"&gt;
+            API REST de estudiantes
+        &lt;/h3&gt;
+        &lt;p class="card-text"&gt;
+            API desarrollada con TypeScript y Express.
+        &lt;/p&gt;
+        &lt;a class="btn btn-primary mt-auto" href="proyectos.html"&gt;
+            Ver proyecto
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                    <h3 class="h5 fw-bold mt-4">Partes de la tarjeta</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <thead class="table-dark"><tr><th>Clase</th><th>Función</th></tr></thead>
+                            <tbody>
+                                <tr><td><code>card</code></td><td>Contenedor principal.</td></tr>
+                                <tr><td><code>card-img-top</code></td><td>Imagen colocada en la parte superior.</td></tr>
+                                <tr><td><code>card-body</code></td><td>Zona del contenido.</td></tr>
+                                <tr><td><code>card-title</code></td><td>Título del proyecto.</td></tr>
+                                <tr><td><code>card-text</code></td><td>Descripción del proyecto.</td></tr>
+                                <tr><td><code>h-100</code></td><td>Ayuda a mantener alturas parejas dentro de la fila.</td></tr>
+                                <tr><td><code>shadow-sm</code></td><td>Agrega una sombra pequeña.</td></tr>
+                                <tr><td><code>mt-auto</code></td><td>Empuja el botón hacia el final del card-body.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        <strong>Nota:</strong>
+                        Lo que más me costó fue dejar los botones alineados. Lo resolví colocando
+                        <code>d-flex flex-column</code> en el cuerpo y <code>mt-auto</code> en el botón.
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                </div>
+            </div>
+        </section>
+        <section id="insignias" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">7. Insignias</h2>
+                        <p>Las uso para mostrar rápidamente las tecnologías de cada proyecto.</p>
+                        <div class="mb-3">
+                            <span class="badge text-bg-primary">TypeScript</span>
+                            <span class="badge text-bg-secondary">Express</span>
+                            <span class="badge text-bg-success">Swagger</span>
+                        </div>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;span class="badge text-bg-primary"&gt;TypeScript&lt;/span&gt;
+&lt;span class="badge text-bg-secondary"&gt;Express&lt;/span&gt;
+&lt;span class="badge text-bg-success"&gt;Swagger&lt;/span&gt;</code></pre>
+                        <p>
+                            <code>badge</code> crea la insignia. Las clases <code>text-bg-primary</code>,
+                            <code>text-bg-secondary</code> y <code>text-bg-success</code> aplican una combinación
+                            de fondo y texto. En mis tarjetas las uso para TypeScript, Express, Swagger, PostgreSQL,
+                            DBeaver, SQL, Python, Tkinter y Contabilidad.
+                        </p>
+                        <div class="alert alert-secondary" role="alert">
+                            <strong>Nota:</strong>
+                            Elegí variantes <code>text-bg-*</code> porque cambian el fondo y mantienen un texto que se
+                            puede leer. Así se reconocen las tecnologías sin leer toda la descripción.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="navbar" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h2 class="fw-bold mb-3">8. Barra de navegación y toggler</h2>
+                    <p>
+                        La barra conecta las tres páginas. Con <code>navbar-expand-md</code> se muestra completa desde
+                        768 px y usa el botón hamburguesa en anchos menores.
+                    </p>
+                    <nav class="navbar navbar-expand-md navbar-dark bg-primary rounded mb-4" aria-label="Demostración de navegación">
+                        <div class="container-fluid">
+                            <a class="navbar-brand fw-bold" href="#navbar">Denilson</a>
+                            <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#menu-demo"
+                                aria-controls="menu-demo"
+                                aria-expanded="false"
+                                aria-label="Abrir menú de demostración">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menu-demo">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Hoja de vida</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="documentacion.html">Documentación</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;nav
+    class="navbar navbar-expand-md navbar-dark bg-primary rounded mb-4"
+    aria-label="Demostración de navegación"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand fw-bold" href="#navbar"&gt;
+            Denilson
+        &lt;/a&gt;
+        &lt;button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu-demo"
+            aria-controls="menu-demo"
+            aria-expanded="false"
+            aria-label="Abrir menú de demostración"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="menu-demo"&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="index.html"&gt;Hoja de vida&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="proyectos.html"&gt;Proyectos&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="documentacion.html"&gt;Documentación&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                    <h3 class="h5 fw-bold mt-4">Partes de mi navbar</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <thead class="table-dark"><tr><th>Clase o atributo</th><th>Función</th></tr></thead>
+                            <tbody>
+                                <tr><td><code>navbar</code></td><td>Clase base de la barra.</td></tr>
+                                <tr><td><code>navbar-expand-md</code></td><td>La barra se expande desde 768 px.</td></tr>
+                                <tr><td><code>navbar-brand</code></td><td>Muestra mi nombre como marca.</td></tr>
+                                <tr><td><code>navbar-toggler</code></td><td>Botón hamburguesa.</td></tr>
+                                <tr><td><code>collapse navbar-collapse</code></td><td>Zona que se oculta o muestra.</td></tr>
+                                <tr><td><code>navbar-nav</code></td><td>Contiene la lista de enlaces.</td></tr>
+                                <tr><td><code>nav-link active</code></td><td>Marca la página actual.</td></tr>
+                                <tr><td><code>ms-auto</code></td><td>Empuja los enlaces hacia la derecha.</td></tr>
+                                <tr><td><code>aria-expanded</code></td><td>Indica si el contenido controlado está abierto o cerrado.</td></tr>
+                                <tr><td><code>aria-current="page"</code></td><td>Marca cuál enlace representa la página actual.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        <strong>Nota:</strong>
+                        Para que el botón funcione, el valor de <code>data-bs-target</code> debe ser igual al
+                        <code>id</code> del menú y el bundle debe estar cargado.
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                </div>
+            </div>
+        </section>
+        <section id="formulario" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">9. Formulario</h2>
+                        <p>
+                            El formulario usa las clases de controles de Bootstrap y la rejilla para acomodar nombre y correo.
+                        </p>
+                        <form class="mb-4">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="demo-nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="demo-nombre" name="nombre" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="demo-correo" class="form-label">Correo</label>
+                                    <input type="email" class="form-control" id="demo-correo" name="correo" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="demo-motivo" class="form-label">Motivo</label>
+                                    <select class="form-select" id="demo-motivo" name="motivo" required>
+                                        <option value="" selected disabled>Seleccione una opción</option>
+                                        <option value="proyecto">Información de un proyecto</option>
+                                        <option value="colaboracion">Colaboración</option>
+                                        <option value="trabajo">Trabajo</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="demo-mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="demo-mensaje" name="mensaje" rows="4" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;form class="mb-4"&gt;
+    &lt;div class="row g-3"&gt;
+        &lt;div class="col-12 col-md-6"&gt;
+            &lt;label for="demo-nombre" class="form-label"&gt;Nombre&lt;/label&gt;
+            &lt;input
+                type="text"
+                class="form-control"
+                id="demo-nombre"
+                name="nombre"
+                required&gt;
+        &lt;/div&gt;
+        &lt;div class="col-12 col-md-6"&gt;
+            &lt;label for="demo-correo" class="form-label"&gt;Correo&lt;/label&gt;
+            &lt;input
+                type="email"
+                class="form-control"
+                id="demo-correo"
+                name="correo"
+                required&gt;
+        &lt;/div&gt;
+        &lt;div class="col-12"&gt;
+            &lt;label for="demo-motivo" class="form-label"&gt;Motivo&lt;/label&gt;
+            &lt;select
+                class="form-select"
+                id="demo-motivo"
+                name="motivo"
+                required&gt;
+                &lt;option value="" selected disabled&gt;Seleccione una opción&lt;/option&gt;
+                &lt;option value="proyecto"&gt;Información de un proyecto&lt;/option&gt;
+                &lt;option value="colaboracion"&gt;Colaboración&lt;/option&gt;
+                &lt;option value="trabajo"&gt;Trabajo&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class="col-12"&gt;
+            &lt;label for="demo-mensaje" class="form-label"&gt;Mensaje&lt;/label&gt;
+            &lt;textarea
+                class="form-control"
+                id="demo-mensaje"
+                name="mensaje"
+                rows="4"
+                required&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class="col-12"&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Enviar&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                        <p>
+                            <code>form-label</code> da estilo al label, <code>form-control</code> se usa en input y textarea,
+                            y <code>form-select</code> en la lista. <code>type="email"</code> ayuda a validar un correo y
+                            <code>required</code> evita enviar un campo obligatorio vacío.
+                        </p>
+                        <div class="alert alert-secondary" role="alert">
+                            <strong>Nota:</strong>
+                            El nombre y el correo se apilan en teléfono y se colocan juntos desde <code>md</code>.
+                            También mantuve <code>label</code>, <code>for</code>, <code>id</code>, <code>name</code> y
+                            <code>required</code>.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="enlaces" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">10. Enlaces y navegación</h2>
+                        <p>Mi sitio tiene tres páginas principales: <code>index.html</code>, <code>proyectos.html</code> y <code>documentacion.html</code>.</p>
+                        <h3 class="h5 fw-bold mt-4">Ir a otra página</h3>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;a class="nav-link" href="index.html"&gt;Hoja de vida&lt;/a&gt;</code></pre>
+                        <h3 class="h5 fw-bold mt-4">Ir a una sección de la misma página</h3>
+                        <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;a class="btn btn-primary" href="#formulario"&gt;Ir al formulario&lt;/a&gt;</code></pre>
+                        <p>
+                            Cuando el <code>href</code> tiene el nombre de un archivo, abre otra página. Cuando empieza
+                            con <code>#</code>, busca un elemento de la misma página que tenga ese <code>id</code>.
+                        </p>
+                        <div class="alert alert-secondary" role="alert">
+                            <strong>Nota:</strong>
+                            esta misma idea la uso en el índice de la documentación. Cada enlace apunta al id de una sección,
+                            por eso puedo encontrar un tema rápido sin recorrer toda la página.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="variables" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h2 class="fw-bold mb-3">11. Variables de color en proyectos.css</h2>
+                    <p>
+                        Esta es la excepción de CSS propio que uso en mis páginas con Bootstrap. No la utilizo para
+                        hacer columnas ni posiciones; la utilizo para cambiar variables de componentes y mantener mi paleta.
+                    </p>
+                    <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>.btn-primary {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #0ea5a8;
+    --bs-btn-border-color: #0ea5a8;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #0b8f92;
+    --bs-btn-hover-border-color: #0b8f92;
+}
+.bg-primary {
+    --bs-primary-rgb: 14, 165, 168;
+}</code></pre>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <thead class="table-dark"><tr><th>Variable</th><th>Qué cambia</th></tr></thead>
+                            <tbody>
+                                <tr><td><code>--bs-btn-color</code></td><td>Color del texto del botón.</td></tr>
+                                <tr><td><code>--bs-btn-bg</code></td><td>Fondo normal.</td></tr>
+                                <tr><td><code>--bs-btn-border-color</code></td><td>Borde normal.</td></tr>
+                                <tr><td><code>--bs-btn-hover-bg</code></td><td>Fondo al pasar el mouse.</td></tr>
+                                <tr><td><code>--bs-btn-active-bg</code></td><td>Fondo cuando el botón está activo.</td></tr>
+                                <tr><td><code>--bs-btn-disabled-bg</code></td><td>Fondo si el botón está deshabilitado.</td></tr>
+                                <tr><td><code>--bs-primary-rgb</code></td><td>Color principal usado por clases como bg-primary.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        <strong>Nota:</strong>
+                        cuando cambié la paleta también tuve que pensar en el hover. Si solo cambio el color normal,
+                        al pasar el mouse puede aparecer un color de Bootstrap que ya no combine con mi página.
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                </div>
+            </div>
+        </section>
+        <section id="errores" class="bg-body-tertiary py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <h2 class="fw-bold mb-3">12. Errores y silencios</h2>
+                        <p>
+                            Estos errores son silenciosos porque la página puede abrir sin mostrar un mensaje claro.
+                            Por eso los reviso en DevTools.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">Problema</th>
+                                        <th scope="col">Síntoma</th>
+                                        <th scope="col">Diagnóstico</th>
+                                        <th scope="col">Solución</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>URL del CDN mal copiada</td>
+                                        <td>La página aparece sin estilos o un recurso no carga.</td>
+                                        <td>Network: busco 404, failed o una URL incorrecta.</td>
+                                        <td>Copio nuevamente la URL completa y recargo.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>data-bs-target</code> no coincide con el <code>id</code></td>
+                                        <td>El botón se ve, pero no abre el menú o el Accordion.</td>
+                                        <td>Elements: comparo el valor del botón con el <code>id</code>.</td>
+                                        <td>Dejo los dos valores iguales y con <code>#</code> en el target.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bundle ausente</td>
+                                        <td>Los estilos cargan, pero los componentes interactivos no responden.</td>
+                                        <td>Network: verifico si aparece <code>bootstrap.bundle.min.js</code>.</td>
+                                        <td>Agrego el script antes de cerrar <code>&lt;/body&gt;</code>.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h5 fw-bold mt-4">Revisión rápida en DevTools</h3>
+                        <ol class="list-group list-group-numbered mb-4">
+                            <li class="list-group-item">Abro DevTools con F12.</li>
+                            <li class="list-group-item">Entro en Network y recargo la página.</li>
+                            <li class="list-group-item">Busco <code>bootstrap.min.css</code> y <code>bootstrap.bundle.min.js</code>.</li>
+                            <li class="list-group-item">Reviso el estado y la dirección solicitada.</li>
+                            <li class="list-group-item">Si un botón no abre algo, comparo sus atributos en Elements.</li>
+                        </ol>
+                        <h3 class="h5 fw-bold mt-4">Estados que vi en Network</h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered align-middle">
+                                <thead class="table-dark"><tr><th>Status</th><th>Cómo lo interpreto</th></tr></thead>
+                                <tbody>
+                                    <tr><td><code>200</code></td><td>El recurso se solicitó y cargó correctamente.</td></tr>
+                                    <tr><td><code>304</code></td><td>El navegador reutilizó una copia que ya tenía en caché.</td></tr>
+                                    <tr><td><code>404</code></td><td>La dirección apunta a un recurso que no se encontró.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="h5 fw-bold mt-4">Si el problema es una clase</h3>
+                        <p>
+                            En <strong>Elements</strong> selecciono el elemento. En la zona de estilos puedo revisar qué
+                            clases tiene y qué reglas están actuando. Esto me sirve cuando la página carga, pero una parte
+                            no se ve como esperaba.
+                        </p>
+                        <div class="alert alert-secondary" role="alert">
+                            <strong>Nota:</strong>
+                            En mi página comprobé que el CSS y el bundle cargaban con estado 200. Mis archivos locales
+                            podían aparecer con 304 porque el navegador ya los tenía en caché; eso no era un error.
+                        </div>
+                        <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="acordeon" class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <h2 class="fw-bold mb-3">13. Extra personal: Accordion</h2>
+                    <p>
+                        El componente propio que elegí para mi página de proyectos fue el Accordion.
+                        Lo usé para mostrar detalles de mis trabajos sin dejar toda la información abierta al mismo tiempo.
+                    </p>
+                    <p>
+                        Para mí la idea principal es sencilla: cada botón controla un bloque. El valor de
+                        <code>data-bs-target</code> tiene que coincidir con el <code>id</code> del contenido que quiero abrir.
+                    </p>
+                    <h3 class="h5 fw-bold mt-4">Demo viva</h3>
+                    <div class="accordion mb-4" id="acordeon-proyectos-demo">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#detalle-api-demo"
+                                    aria-expanded="true"
+                                    aria-controls="detalle-api-demo">
+                                    API REST de estudiantes
+                                </button>
+                            </h3>
+                            <div
+                                id="detalle-api-demo"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#acordeon-proyectos-demo">
+                                <div class="accordion-body">
+                                    Proyecto desarrollado con TypeScript, Express y Swagger. Incluye los métodos
+                                    GET, POST, PUT, PATCH y DELETE para trabajar con estudiantes.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#detalle-base-demo"
+                                    aria-expanded="false"
+                                    aria-controls="detalle-base-demo">
+                                    Sistema de base de datos
+                                </button>
+                            </h3>
+                            <div
+                                id="detalle-base-demo"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-proyectos-demo">
+                                <div class="accordion-body">
+                                    Proyecto trabajado con PostgreSQL y DBeaver. Incluye tablas relacionadas,
+                                    consultas, procedimientos almacenados y triggers.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#detalle-contable-demo"
+                                    aria-expanded="false"
+                                    aria-controls="detalle-contable-demo">
+                                    Sistema contable empresarial
+                                </button>
+                            </h3>
+                            <div
+                                id="detalle-contable-demo"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#acordeon-proyectos-demo">
+                                <div class="accordion-body">
+                                    Sistema realizado en Python con una interfaz para clientes, proveedores,
+                                    empleados, inventario, transacciones, libro diario, libro mayor y reportes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="h5 fw-bold">Código exacto de la demo</h3>
+                    <pre class="bg-dark text-light p-3 rounded overflow-auto"><code>&lt;div class="accordion" id="acordeon-proyectos-demo"&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;h3 class="accordion-header"&gt;
+            &lt;button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#detalle-api-demo"
+                aria-expanded="true"
+                aria-controls="detalle-api-demo"&gt;
+                API REST de estudiantes
+            &lt;/button&gt;
+        &lt;/h3&gt;
+        &lt;div
+            id="detalle-api-demo"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#acordeon-proyectos-demo"&gt;
+            &lt;div class="accordion-body"&gt;
+                Proyecto desarrollado con TypeScript, Express y Swagger.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered align-middle">
+                            <thead class="table-dark">
+                                <tr><th>Parte</th><th>Qué hace</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>accordion</code></td><td>Contenedor principal.</td></tr>
+                                <tr><td><code>accordion-item</code></td><td>Cada bloque del componente.</td></tr>
+                                <tr><td><code>accordion-button</code></td><td>Botón que abre o cierra el contenido.</td></tr>
+                                <tr><td><code>collapse</code></td><td>Permite ocultar y mostrar el contenido.</td></tr>
+                                <tr><td><code>show</code></td><td>Hace que un bloque comience abierto.</td></tr>
+                                <tr><td><code>collapsed</code></td><td>Indica que el botón comienza cerrado.</td></tr>
+                                <tr><td><code>data-bs-target</code></td><td>Indica qué id controla el botón.</td></tr>
+                                <tr><td><code>data-bs-parent</code></td><td>Relaciona los ítems con el Accordion principal.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                        <strong>Nota:</strong>
+                        Esta parte me ayudó a entender mejor por qué algunos componentes se ven bien pero no responden.
+                        Si el target no coincide con el id, o si falta el bundle, el botón aparece pero el contenido no abre.
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="#inicio">Volver arriba</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">© 2026 Denilson Yair Díaz López</p>
+        </div>
+    </footer>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
